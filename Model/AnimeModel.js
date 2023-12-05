@@ -40,7 +40,6 @@ const AnimeSchema = new mongoose.Schema({
   },
   ave_score: { 
     type: Number,
-    required: true,
   },
   image: { 
     type: String,
