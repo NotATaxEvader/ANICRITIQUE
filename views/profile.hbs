@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Profile Page</title>
+</head>
+<link rel="stylesheet" href="/css/profile.css">
+<body>
+    <div class="header-wrapper">
+        <header>
+            <nav>
+                <div class="menu">
+                    <div class="logo">
+                        <a href="/">
+                        <img src="/images/logo.png">
+                            AniCritique
+                        </a>
+                    </div>
+                    <ul>
+                        <li><a href="#">Anime</a></li>
+                        <li><a href="#">Cartoon</a></li>
+                        <li><a href="#">Movie</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <div class="cols-container">
+            <div class="left-column">
+                <div class="img-container">
+                    <img src="{{prof.picture_url}}">
+                    <span></span>
+                </div>
+                <h2>{{prof.username}}</h2>
+                <p>Member Since: {{prof.join_date}}</p>
+                <hr>
+                <p>{{prof.email}}</p>
+
+                {{!-- <ul class="about">
+                    <li><span>123</span>Following</li>
+                    <li><span>321</span>Followers</li>
+                    <li><span>950</span>Kudos</li>
+                </ul> --}}
+
+                <hr>
+
+                <div class="content">
+                    <p>
+                        {{prof.bio}}
+                    </p>
+
+                    <button name="editProf" onclick="location.href = '/profile/editRev';">Edit Profile</button>
+
+                    <form action="/logout" method="get">
+                        <button>Logout</button>
+                    </form>
+
+                    {{!-- <ul>
+                        <li><i class="fa-brands fa-facebook"></i></li>
+                        <li><i class="fa-brands fa-twitter"></i></li>
+                        <li><i class="fa-brands fa-instagram"></i></li>
+                        <li><i class="fa-brands fa-discord"></i></li>
+                    </ul> --}}
+                </div>
+            </div>
+
+            <div class="right-column">
+                <nav>
+                    <ul>
+                        <li><a href="#">reviews</a></li>
+                    </ul>
+                </nav>
+                <hr>
+                <div class="rev-container">
+                        {{#if review.length}}
+                        {{#each review}}
+                        <div class="review">
+                            <div class="rev-head">
+                                <div class="profile">
+                                    <img class="rev-prfpic" src="{{this.user.picture_url}}">
+                                    <div>
+                                        <h6>{{ this.anime.jp_title }}
+                                            <p>{{ this.anime.en_title }}</p>
+                                        </h6>
+                                        <p>{{ this.date }}</p>
+                                    </div>
+                                </div>
+                                <div class="rating">
+                                    <h5>⭐ {{ this.score }}/10</h5>
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <div class="rev-cont">
+                                <h5>{{ this.title }}</h5>
+                                <p>{{ this.content }}</p>
+                            </div>
+
+                            <hr>
+
+                            <div class="rev-foot">
+                                <div class="rev-edit">
+                                    <button name="editButt" onclick="location.href = '/profile/{{ this.anime.jp_title }}/{{ this._id }}/editRev';">Edit</button>
+                                </div>
+                                <div class="rev-delete">
+                                    <button name="deleteButt" onclick="location.href = '/profile/{{ this._id }}/delRev';">Delete</button>
+                                </div>
+                            </div>
+
+                        </div>
+                        <hr>
+                        {{/each}}
+                        {{/if}}
+                    </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

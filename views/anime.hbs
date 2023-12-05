@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AniCritique</title>
+</head>
+<link rel="stylesheet" href="/css/anime.css">
+<body>
+    <header>
+        <nav>
+            <div class="menu">
+                <div class="logo">
+                    <a href="/">
+                        <img src="../images/logo.png">AniCritique
+                    </a>
+                </div>
+                <ul>
+                    <li><a href="#">Anime</a></li>
+                    <li><a href="#">Cartoon</a></li>
+                    <li><a href="#">Movie</a></li>
+                </ul>
+                <button id="prfpic"><a href="/login"><img class="mini-prfpic" src="{{pfp}}"></a></button>
+            </div>
+        </nav>
+    </header>
+
+<br>
+
+<div class="container">
+    <div class="anime">
+        <table>
+            <tr>
+                <td class="basic">
+                    <div><img class="anipic" src="{{ anime.image }}"></div>
+                    <div>Basic Info</div>
+                    <table class="binfo">
+                        <tr>
+                            <td width="45%">Episodes</td>
+                            <td>{{ anime.episode_count }}</td>
+                        </tr>
+                        <tr>
+                            <td>Type</td>
+                            <td>{{ anime.type }}</td>
+                        </tr>
+                        <tr>
+                            <td>Status</td>
+                            <td>Ongoing</td>
+                        </tr>
+                        <tr>
+                            <td>Premiere</td>
+                            <td>{{ anime.premiere }}</td>
+                        </tr>
+                        <tr>
+                            <td>Genre</td>
+                            <td>{{ anime.genre }}</td>
+                        </tr>
+                        <tr>
+                            <td>Studio</td>
+                            <td>{{ anime.studio }}</td>
+                        </tr>
+                        <tr>
+                            <td>Rating</td>
+                            <td>{{ anime.rating }}</td>
+                        </tr>
+                    </table>
+                </td>
+                <td class="desc">
+                    <h1 class="title">{{ anime.jp_title }} - {{ anime.en_title }}</h1>
+                    <div class="score">
+                        <div><h3>Score<br>{{ aveScore }}</h3></div>
+                        <div class="divider"></div>
+                        <div><h3>Reviews<br>{{review.length}}</h3></div>
+                    </div>
+                    <div class="summ">
+                        <h4>SYNOPSIS</h4>
+                        <p>
+                            {{ anime.synopsis }}
+                        </p>
+                    </div>
+
+                    <hr>
+
+                    <div style="display: flex; justify-content: space-between">
+                        <h4>REVIEWS</h4>
+                        <button class="write" onclick="location.href = '{{anime.jp_title}}/review';">Write Review ✏️</button>
+                    </div>
+
+                    <p id="error-message" style="color: red;"></p>
+
+                    <div id="new-rev"></div>
+
+                    <div class="rev-container">
+                        {{#if review.length}}
+                        {{#each review}}
+                        <div class="review">
+                            <div class="rev-head">
+                                <div class="profile">
+                                    <img class="rev-prfpic" src="{{this.user.picture_url}}">
+                                    <div>
+                                        <h6>{{ this.user.username }}</h6>
+                                        <p>{{ this.date }}</p>
+                                    </div>
+                                </div>
+                                <div class="rating">
+                                    <h5>⭐ {{ this.score }}/10</h5>
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <div class="rev-cont">
+                                <h5>{{ this.title }}</h5>
+                                <p>{{ this.content }}</p>
+                            </div>
+
+                            <hr>
+
+                            <div class="rev-foot">
+                                <div class="rev-reply">
+                                    <p>{{ this.user.bio }}...</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <hr>
+                        {{/each}}
+                        {{/if}}
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<br>
+
+<script src="/js/stuff.js"></script>
+</body>
+</html>

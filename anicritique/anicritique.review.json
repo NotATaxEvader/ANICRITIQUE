@@ -1,0 +1,31 @@
+[{
+  "_id": {
+    "$oid": "654f180f5c8d09eb8219e019"
+  },
+  "user": {
+    "$oid": "654f18d75c8d09eb8219e024"
+  },
+  "anime": {
+    "$oid": "654e13187d86ed117dc4d679"
+  },
+  "content": "Underrated Anime. I like how unique this fantasy anime was. It's so refreshing to see a fantasy anime that's quite wholesome and not so much as cliche especially with the number of fantasy anime we've been seeing nowadays",
+  "score": "9",
+  "date": "Dec 20, 2023",
+  "title": "Long Life"
+},
+{
+  "_id": {
+    "$oid": "6554f289f82c1aac633fbde2"
+  },
+  "user": {
+    "$oid": "654f18d75c8d09eb8219e024"
+  },
+  "anime": {
+    "$oid": "654e13187d86ed117dc4d679"
+  },
+  "content": "IT's pretty good so far in the year",
+  "score": "8",
+  "date": "Thu Nov 16 2023 00:32:09 GMT+0800 (Philippine Standard Time)",
+  "title": "Good",
+  "__v": 0
+}]

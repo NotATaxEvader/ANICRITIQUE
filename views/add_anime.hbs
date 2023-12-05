@@ -1,0 +1,105 @@
+<!-- include header -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AniCritique Admin Side</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/adminview.css">
+</head>
+<body>
+
+    <!-- Header -->
+        <header id="header">
+            <nav>
+                <div class="container">
+                    <div class="text-center">
+                        <a href="/" class="nav-brand text-light">AniCritique Admin Side</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    <!-- /Header -->
+<!-- /include header -->
+
+    <!-- Main Site -->
+    <main id="site-main">
+        <div class="container">
+            <div class="box-nav d-flex-justify-between">
+                <div class="filter">
+                    <a href="/admin"><i class="fas fa-angle-double-left"></i>All Anime</a>
+                </div>
+            </div>
+            <div class="form-title text-center">
+                <h2 class="text-dark">New Anime</h2>
+                <span class="text-light">Use the form below to create a new anime record.</span>
+            </div>
+
+            <!-- add anime form -->
+                        <!-- form handling -->
+                        <form action ="/add/anime" method="POST" id="add_anime"> <!--clicking submit will go to post route to add anime to database-->
+                            <div class="new_anime">
+                                <div class="form-group">
+                                    <label for="jp_title" class="text-light">jp_title</label>
+                                    <input type="hidden" name="id" value="">
+                                    <input type="text" name="jp_title" value="" placeholder="ex. Kyoukai no Kanata">
+                                </div>
+                                <div class="form-group">
+                                    <label for="en_title" class="text-light">en_title</label>
+                                    <input type="text" name="en_title" value="" placeholder="ex. Beyond the Boundary">
+                                </div>
+                                <div class="form-group">
+                                    <label for="synopsis" class="text-light">synopsis</label>
+                                    <textarea name="synopsis" value="" placeholder="ex. This is a story about boy and girl."></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="studio" class="text-light">studio</label>
+                                    <input type="text" name="studio" value="" placeholder="ex. KyoAni">
+                                </div>
+                                <div class="form-group">
+                                    <label for="type" class="text-light">type</label>
+                                    <input type="text" name="type" value="" placeholder="ex. Anime">
+                                </div>
+                                <div class="form-group">
+                                    <label for="genre" class="text-light">genre</label>
+                                    <input type="text" name="genre" value="" placeholder="ex. Fantasy">
+                                </div>
+                                <div class="form-group">
+                                    <label for="premiere" class="text-light">premiere</label>
+                                    <input type="text" name="premiere" value="" placeholder="ex. Fall 2023">
+                                </div>
+                                <div class="form-group">
+                                    <label for="episode_count" class="text-light">episode_count</label>
+                                    <input type="text" name="episode_count" value="" placeholder="ex. 28">
+                                </div>
+                                <div class="form-group">
+                                    <label for="rating" class="text-light">rating</label>
+                                    <input type="text" name="rating" value="" placeholder="ex. PG-13">
+                                </div>
+                                <div class="form-group">
+                                    <label for="image" class="text-light">image</label>
+                                    <input type="text" name="image" value="" placeholder="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="summ" class="text-light">summ</label>
+                                    <input type="text" name="summ" value="" placeholder="ex. They are both in love.">
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn text-light update">Save</button>
+                                </div>
+                            </div>
+                        </form>
+            <!-- /add anime form -->
+            
+        </div>
+    </main>
+<!-- /Main Site -->
+
+<!-- include footer -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="/js/index.js"></script>
+
+</body>
+</html>
+<!-- /include footer -->

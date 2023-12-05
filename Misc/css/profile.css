@@ -1,0 +1,450 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    font-family: "Open Sans", sans-serif;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+header nav {
+    background: rgb(47, 45, 41);
+    width: 100%;
+    padding: 10px 0;
+}
+
+header nav .menu {
+    max-width: 1250px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.menu .logo a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 40px;
+    font-weight: 800;
+    height: 100%;
+    vertical-align: 50px;
+}
+
+.menu ul {
+    display: inline-flex;
+}
+
+.menu ul li {
+    list-style: none;
+    margin-left: 7px;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+    padding: 8px 30px;
+    border-radius: 5px;
+    transition: all 300ms ease;
+}
+
+.menu ul li a:hover {
+    background: #fff;
+    color: #000;
+}
+
+
+.menu .logo img {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}
+
+.menu .headbutt {
+    min-width: 85px;
+    transition: background-color 300ms;
+    height: 30px;
+    color: var(--text-primary);
+    background: var(--accent);
+    border-radius: 10px;
+}
+
+.menu .headbutt:hover {
+    border: none;
+    background: #ffc380;
+    color: var(--text-primary);
+}
+
+.menu #prfpic {
+    float: right;
+    height: auto;
+}
+
+.menu .mini-prfpic {
+    width: 70px;
+    height: 70px;
+    transition: opacity 300ms;
+    border-radius: 350px;
+    object-fit: cover;
+}
+
+.menu .mini-prfpic:hover {
+    opacity: 50%;
+    border-radius: 350px;
+}
+
+.header-wrapper header {
+    width: 100%;
+    background: url(https://www.3dwallpaperarts.com/wp-content/uploads/2021/05/japanese-wallpaper-0075-1536x459.jpg) no-repeat 50% 20% / cover;
+    min-height: calc(90px + 20vw);
+}
+
+.left-column {
+    padding: 25px 20px;
+    text-align: center;
+    max-width: 350px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.img-container {
+    position: absolute;
+    top: -90px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.img-container img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    box-shadow: 1px 3px 12px rgba(0,0,0,0.18);
+}
+
+.left-column h2 {
+    margin-top: 100px;
+    font-weight: 600;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.left-column p {
+    font-size: 0.9rem;
+    color: #818181;
+    margin: 0;
+}
+
+.about {
+    justify-content: space-between;
+    position: relative;
+    margin: 25px 0;
+}
+
+.about li {
+    display: flex;
+    flex-direction: column;
+    color: #818181;
+    font-size: 0.9rem; 
+}
+
+.about li span {
+    color: #1d1d1d; 
+    font-weight: 600;
+}
+
+.about::after {
+    position: absolute;
+    content: "";
+    bottom: -16px;
+    display: block;
+    background: #ccc;
+    height: 1px;
+    width: 100%;
+}
+
+.content p {
+    font-size: 1rem;
+    color: #1d1d1d;
+    line-height: 1.8em;
+}
+
+.content ul {
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.content ul li {
+    font-size: 1.3rem;
+}
+
+.content button{
+    background: #000000;
+    color: #fff;
+    border: solid black 5px;
+    padding: 10px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+    transition: border 300ms
+}
+
+.content button:hover{
+    border: solid rgb(0, 174, 255) 5px;
+}
+
+.right-column {
+    margin-left: 50px;
+    width: 930px;
+    background: bisque;
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.right-column nav {
+    display: flex;
+    align-items: center;
+    padding: 30px 0;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.right-column nav ul {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.right-column nav ul li a {
+    text-transform: uppercase;
+    color: #818181; 
+}
+
+.right-column nav button {
+    background: #0091ff;
+    color: #fff;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.right-column nav ul li:nth-child(1) a{
+    color: #1d1d1d;
+    font-weight: 600;
+}
+
+.right-column nav button:hover {
+    opacity: 0.8;
+}
+
+.right-column2 {
+    margin-left: 50px;
+    width: 930px;
+    background: bisque;
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.edit-div input[type="text"]{
+    width: 250px;
+}
+
+.edit-div{
+    width: 100%;
+    padding: .6em 1em;
+    margin: .3em 0;
+    border: 1px solid var(--border);
+    font-size: 1em;
+    border-radius: .2em;
+    color: black;
+    font-weight: bold;
+}
+
+.edit-title{
+    width: 100%;
+    padding: .6em 1em;
+    margin: .3em 0;
+    border: 1px solid var(--border);
+    font-size: 2em;
+    font-weight: bold;
+    border-radius: .2em;
+    color: black;
+}
+
+.bio-input{
+    height: 100px;
+    width: 500px;
+}
+
+.edit-div button{
+    width: 200px;
+}
+
+.edit-div {
+    width: 200px;
+}
+
+.rev-container {
+    background: var(--primary);
+    margin: auto;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.review {
+    background: beige;
+    padding: 1.5%;
+    border-radius: 15px;
+    margin: 1%;
+}
+
+.review .rev-head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rev-head .profile {
+    display: flex;
+    width: 50%;
+}
+
+.profile .rev-prfpic {
+    width: 35px;
+    height: 35px;
+    transition: opacity 300ms;
+    border-radius: 350px;
+    margin: 0.5% 1.5% 0 1%;
+}
+
+.profile .rev-prfpic:hover {
+    width: 35px;
+    height: 35px;
+    opacity: 50%;
+    border-radius: 350px;
+}
+
+.profile h6, p {
+    margin: 0;
+}
+
+.profile p {
+    font-size: small;
+}
+
+.rev-head .rating {
+    padding-top: 0.5%;
+    margin-right: 1%;
+}
+
+.review .rev-cont {
+    margin: 0 1%
+}
+
+.review .rev-foot {
+    margin-top: 1%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rev-foot .rev-edit button{
+    color: white;
+    border-radius: 10px;
+    background: navy;
+    cursor: pointer;
+    transition: background-color 300ms;
+}
+
+.rev-foot .rev-edit button:hover {
+    background: deepskyblue;
+}
+
+.rev-foot .rev-delete button {
+    color: white;
+    border-radius: 10px;
+    background: rgb(187, 0, 0);
+    cursor: pointer;
+    transition: background-color 300ms;
+}
+
+.rev-foot .rev-delete button:hover {
+    background: rgb(236, 71, 71);
+}
+
+.kudos {
+    width: 100%;
+}
+
+.kudos img {
+    width: 20px;
+    height: 20px;
+    margin: .5%;
+}
+
+.kudos img:hover {
+    opacity: 75%;
+}
+
+@media (min-width: 868px) {
+    .cols-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 90%;
+        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 50px;
+    }
+
+    .left-column {
+        padding: 25px 0;
+    }
+
+    .right-column nav ul {
+        flex-direction: row;
+        gap: 30px;
+    }
+}
+
+@media (min-width: 1017px) {
+    .left-column {
+        margin: 0;
+        margin-right: auto;
+    }
+
+    .right-column nav {
+        flex-direction: row;
+    }
+
+    .right-column nav button {
+        margin-top: 0;
+    }
+}

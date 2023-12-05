@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Profile Page</title>
+</head>
+<link rel="stylesheet" href="/css/profile.css">
+<body>
+    <div class="header-wrapper">
+        <header>
+            <nav>
+                <div class="menu">
+                    <div class="logo">
+                        <a href="/">
+                        <img src="/images/logo.png">
+                            AniCritique
+                        </a>
+                    </div>
+                    <ul>
+                        <li><a href="#">Anime</a></li>
+                        <li><a href="#">Cartoon</a></li>
+                        <li><a href="#">Movie</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <div class="cols-container">
+            <div class="left-column">
+                <div class="img-container">
+                    <img src="{{prof.picture_url}}">
+                    <span></span>
+                </div>
+                <h2>{{prof.username}}</h2>
+                <p>Member Since: {{prof.join_date}}</p>
+                <hr>
+                <p>{{prof.email}}</p>
+
+                {{!-- <ul class="about">
+                    <li><span>123</span>Following</li>
+                    <li><span>321</span>Followers</li>
+                    <li><span>950</span>Kudos</li>
+                </ul> --}}
+
+                <hr>
+
+                <div class="content">
+                    <p>
+                        {{prof.bio}}
+                    </p>
+
+                    <button onclick="location.href = '/profile';">Return</button>
+
+                    <form action="/logout" method="get">
+                        <button>Logout</button>
+                    </form>
+
+                    {{!-- <ul>
+                        <li><i class="fa-brands fa-facebook"></i></li>
+                        <li><i class="fa-brands fa-twitter"></i></li>
+                        <li><i class="fa-brands fa-instagram"></i></li>
+                        <li><i class="fa-brands fa-discord"></i></li>
+                    </ul> --}}
+                </div>
+            </div>
+
+            <div class="right-column2">
+                    <div class="edit-title">
+                        <label for="type">Edit Profile</label>
+                    </div>
+                        <hr>
+                <div class="rev-container">
+                    <form method="POST" action="/profile/editRev">
+                    <div class="edit-div">
+                        <label for="type">Profile Picture</label>
+                        <input type="text" name="pfp" value="{{prof.picture_url}}" placeholder=".jpg">
+                    </div>
+                    <div class="edit-div">
+                        <label for="type">Username</label>
+                        <input type="text" name="name" value="{{prof.username}}" placeholder="ex. PJ Co">
+                    </div>
+                    <div class="edit-div">
+                        <label for="type">Biography</label>
+                        <textarea class="bio-input" name="bio" placeholder="ex. Hi, I'm PJ!">{{prof.bio}}</textarea>
+                    </div>
+                    <div class="edit-div">
+                        <button type="submit" class="">Save</button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+[{
+  "_id": {
+    "$oid": "654f18715c8d09eb8219e01e"
+  },
+  "user": {
+    "$oid": "654f18d75c8d09eb8219e024"
+  },
+  "anime": {
+    "$oid": "654e13187d86ed117dc4d679"
+  },
+  "status": {
+    "$oid": "654e1ce57d86ed117dc4d68c"
+  },
+  "score": "9",
+  "ep_watched": "5"
+}]

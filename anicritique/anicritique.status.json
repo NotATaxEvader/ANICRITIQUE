@@ -1,0 +1,30 @@
+[{
+  "_id": {
+    "$oid": "654e1ce57d86ed117dc4d68c"
+  },
+  "name": "Watching"
+},
+{
+  "_id": {
+    "$oid": "654e1cfb7d86ed117dc4d68d"
+  },
+  "name": "Completed"
+},
+{
+  "_id": {
+    "$oid": "654e1d097d86ed117dc4d68e"
+  },
+  "name": "On-Hold"
+},
+{
+  "_id": {
+    "$oid": "654e1d187d86ed117dc4d68f"
+  },
+  "name": "Dropped"
+},
+{
+  "_id": {
+    "$oid": "654e1d297d86ed117dc4d690"
+  },
+  "name": "Plan to Watch"
+}]

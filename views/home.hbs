@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AniCritique</title>
+</head>
+<link rel="stylesheet" href="css/style.css">
+<script src="../Misc/js/stuff.js"></script>
+<body>
+<header>
+    <nav>
+        <div class="menu">
+            <div class="logo">
+                <a href="/">
+                    <img src="images/logo.png">AniCritique
+                </a>
+            </div>
+            <ul>
+                <li><a href="#">Anime</a></li>
+                <li><a href="#">Cartoon</a></li>
+                <li><a href="#">Movie</a></li>
+            </ul>
+            <button id="prfpic"><a href="/login"><img class="mini-prfpic" src="{{pfp}}"></a></button>
+        </div>
+    </nav>
+</header>
+
+<marquee id="news">
+    Attack on Titan: Final Season Part 8: Titanfall releases June 28, 2027!!! Another Demon Slayer movie has been announced!!! Gojo from Jujutsu Kaisen dies epicly.
+    Kagurabachi anime to be animated by Studio Ghibli!!!
+</marquee>
+
+<div class="logo">
+    <img src="images/logo-no-sub.png">
+    <div class="searchbar">
+        <form method="get" action="/search">
+            <input type="text" name="search" placeholder="Searching for Peak...">
+            <button type="submit">🔎</button>
+        </form>
+    </div>
+</div>
+
+<div class="ctgry">ANIME</div>
+
+<div class="container">
+    {{#if animeData.length}}
+    {{#each animeData}}
+    <div class="anime">
+        <form action="/anime/{{this.jp_title}}" method="get">
+        <button name="aniTitle" type="submit" value="{{ this.jp_title }}">
+            <div class="peak">
+                <img class="anipic" src="{{ this.image }}">
+                <div class="ani-lay">
+                    <div class="summ">
+                        {{ this.summ }}
+                    </div>
+                </div>
+            </div>
+        <h5 class="title">{{ this.jp_title }}</h5>
+        </button>
+        </form>
+    </div>
+    {{/each}}
+    {{/if}}
+</div>
+
+{{#if oneReview}}
+<div class="ctgry">RECENT</div>
+
+    <div class="container">
+        <div class="rev-container">
+            <div class="review">
+                <div class="rev-head">
+                    <div class="profile">
+                        <img class="rev-prfpic" src="{{oneReview.user.picture_url}}">
+                        <div>
+                            <h6>{{ oneReview.user.username }}</h6>
+                            <p>{{ oneReview.date }}</p>
+                        </div>
+                    </div>
+                    <div class="rating">
+                        <h5>⭐ {{ oneReview.score }}/10</h5>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="rev-cont">
+                    <h5>{{ oneReview.title }}</h5>
+                    <p>{{ oneReview.content }}</p>
+                </div>
+                <hr>
+                <div class="rev-foot">
+                    <div class="rev-reply">
+                        <p>{{ oneReview.user.bio }}...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{{/if}}
+<br>
+
+<script src="stuff.js"></script>
+</body>
+</html>

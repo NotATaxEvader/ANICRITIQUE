@@ -1,0 +1,11 @@
+[{
+  "_id": {
+    "$oid": "654f18d75c8d09eb8219e024"
+  },
+  "username": "sample",
+  "email": "sample@gmail.com",
+  "password": "sample",
+  "join_date": "Nov 10, 2023",
+  "bio": "Sample Biography",
+  "picture_url": "https://wallpapercave.com/wp/wp7976100.jpg"
+}]

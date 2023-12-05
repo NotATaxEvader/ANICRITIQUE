@@ -1,0 +1,421 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root {
+    --primary: bisque;
+    --accent: burlywood;
+    --text-primary: black;
+    --text-accent: white;
+    --text-link: #0000EE;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #f2f2f2;
+    font-family: "Open Sans", sans-serif;
+}
+
+nav {
+    background: rgb(47, 45, 41);
+    width: 100%;
+    padding: 10px 0; 
+}
+
+nav .menu {
+    max-width: 1250px;
+    margin: auto;
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px; 
+}
+
+.menu .logo a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.menu ul {
+    display: inline-flex;
+}
+
+.menu ul li {
+    list-style: none;
+    margin-left: 7px;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+    padding: 8px 30px;
+    border-radius: 5px;
+    transition: all 300ms ease;
+}
+
+.menu ul li a:hover {
+    background: #fff;
+    color: #000; 
+}
+
+
+.menu .logo img {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}
+
+button {
+    border: none;
+    background: none;
+}
+
+header .headbutt {
+    min-width: 85px;
+    transition: background-color 300ms;
+    height: 30px;
+    color: var(--text-primary);
+    background: var(--accent);
+    border-radius: 10px;
+}
+
+header .headbutt:hover {
+    border: none;
+    background: #ffc380;
+    color: var(--text-primary);
+}
+
+header #prfpic {
+    float: right;
+    height: auto;
+}
+
+header .mini-prfpic {
+    width: 70px;
+    height: 70px;
+    transition: opacity 300ms;
+    border-radius: 350px;
+    object-fit: cover;
+}
+
+header .mini-prfpic:hover {
+    opacity: 50%;
+    border-radius: 350px;
+}
+
+#news {
+    width: 100%;
+    height: 30px;
+    direction: rtl;
+    font-family: Broadway;
+    font-size: 20px;
+    background: beige;
+    margin: auto;
+}
+
+.logo {
+    margin: 10px;
+    text-align: center;
+    max-height: 500px;
+}
+
+.logo img {
+    max-height: 500px;
+}
+
+.logo .searchbar {
+    position: relative;
+    left: 50%;
+    bottom: 100px;
+    transform: translate(-50%, -50%);
+    width: 30%;
+}
+
+.logo .searchbar input[type=text]{
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: 2px solid black;
+    border-right: 0;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    width: 80%;
+}
+
+.logo .searchbar button {
+    transform: translate(-12%, 0);
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    cursor: pointer;
+    transition: background-color 300ms;
+    border: 2px solid black;
+    border-left: 0;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.logo .searchbar button:hover {
+    background-color: #ccc;
+}
+
+.ctgry {
+    text-align: center;
+    font-size: xxx-large;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.container {
+    background: var(--primary);
+    margin: auto;
+    padding: 15px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.anime {
+    margin-right: 10px;
+    margin-left: 10px;
+    height: 100%;
+    width: 100%;
+    max-height: 338.55px;
+    max-width: 230px;
+    text-align: center;
+}
+
+.peak {
+    position: relative;
+    align-content: center;
+}
+
+.peak .anipic {
+    height: 100%;
+    width: 100%;
+    max-height: 310px;
+    max-width: 230px;
+    border-radius: 20px;
+    object-fit: cover;
+    transition: opacity 300ms;
+}
+
+.peak .ani-lay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: black;
+    border-radius: 20px;
+}
+
+.peak:hover .ani-lay {
+    opacity: 75%;
+}
+
+.ani-lay .summ {
+    position: absolute;
+    font-size: large;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/* anime review*/
+
+.anime {
+    height: 100%;
+    width: 100%;
+}
+
+.anime .anipic {
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.anime td {
+    vertical-align: top;
+}
+
+.basic {
+    width: 20%;
+    text-align: center;
+}
+
+.kudos {
+    width: 100%;
+}
+
+.kudos img {
+    width: 20px;
+    height: 20px;
+    margin: .5%;
+}
+
+.kudos img:hover {
+    opacity: 75%;
+}
+
+.basic .binfo {
+    height: 100%;
+    width: 100%;
+    border: 2px solid var(--accent);
+    border-collapse: separate;
+    background-color: beige;
+    border-radius: 10px;
+    border-spacing: 0;
+}
+
+.desc {
+    padding: 1%;
+}
+
+.desc .score {
+    margin: .5%;
+    padding: .5% 1%;
+
+    display: flex;
+    width: fit-content;
+    background-color: var(--accent);
+    border-radius: 15px;
+}
+
+.score div {
+    margin: 0 10px;
+    text-align: center;
+}
+
+.score .divider {
+    width: 2px;
+    height: 75px;
+    background-color: var(--text-primary);
+    vertical-align: middle;
+}
+
+.desc .title {
+    text-align: left;
+}
+
+.write {
+    height: 100%;
+}
+
+.write:hover {
+    filter: brightness(50%);
+}
+
+#new-rev .review{
+    background-color: lightgray;
+    border: 1.5px solid black;
+    overflow: hidden;
+}
+
+#new-rev #title{
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid black;
+}
+
+#new-rev #description{
+    width: 100%;
+    height: 300px;
+    border-radius: 8px;
+}
+
+#new-rev button{
+    margin-top: 1%;
+    margin-left: 1%;
+    background-color: dimgray;
+    border: 1px solid black;
+    border-radius: 8px;
+    color: var(--text-accent);
+    float: right;
+    transition: background-color 300ms;
+}
+
+#new-rev button:hover{
+    background-color: darkgray;
+}
+
+.rev-container {
+    width: 100%;
+}
+
+.review {
+    background: beige;
+    padding: 1.5%;
+    border-radius: 15px;
+    margin: 1%;
+}
+
+.review .rev-head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rev-head .profile {
+    display: flex;
+    width: 50%;
+}
+
+.profile .rev-prfpic {
+    width: 35px;
+    height: 35px;
+    transition: opacity 300ms;
+    border-radius: 350px;
+    margin: 0.5% 1.5% 0 1%;
+}
+
+.profile .rev-prfpic:hover {
+    width: 35px;
+    height: 35px;
+    opacity: 50%;
+    border-radius: 350px;
+}
+
+.profile h6, p {
+    margin: 0;
+}
+
+.profile p {
+    font-size: small;
+}
+
+.rev-head .rating {
+    padding-top: 0.5%;
+    margin-right: 1%;
+}
+
+.review .rev-cont {
+    margin: 0 1%
+}
+
+.review .rev-foot {
+    margin-top: 1%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rev-foot .rev-reply {
+    color: navy;
+    transition: color 300ms;
+}
+
+.rev-foot .rev-reply:hover {
+    color: deepskyblue;
+}

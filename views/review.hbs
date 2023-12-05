@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AniCritique</title>
+</head>
+<link rel="stylesheet" href="/css/anime.css">
+<body>
+    <header>
+        <nav>
+            <div class="menu">
+                <div class="logo">
+                    <a href="/">
+                        <img src="/images/logo.png">AniCritique
+                    </a>
+                </div>
+                <ul>
+                    <li><a href="#">Anime</a></li>
+                    <li><a href="#">Cartoon</a></li>
+                    <li><a href="#">Movie</a></li>
+                </ul>
+                <button id="prfpic"><a href="/login"><img class="mini-prfpic" src="{{pfp}}"></a></button>
+            </div>
+        </nav>
+    </header>
+
+<br>
+
+<div class="container">
+    <div class="anime">
+        <table>
+            <tr>
+                <td class="basic">
+                    <div><img class="anipic" src="{{ anicache.image }}"></div>
+                </td>
+                <td class="desc">
+                    <h1 class="title">{{ anicache.jp_title }} - {{ anicache.en_title }}</h1>
+
+                    <hr>
+
+                    <div style="display: flex; justify-content: space-between">
+                        <h4>REVIEWS</h4>
+                    </div>
+
+                    <div id="new-rev">
+                        <div class="review">
+                            <h5>Write a Review!</h5>
+                            <hr>
+                            <form action="/anime/review" method="post" id="review-form" onsubmit="return validateReviewForm(event)">
+                                <select id="mySelect" name="score">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                                    
+                                <span>⭐</span>
+                                
+                                <br><br>
+                                
+                                <input type="text" id="title" name="title" placeholder="Title">
+                                
+                                <br><br>
+                                
+                                <textarea id="description" name="description" placeholder="Detailed Review..."></textarea>
+                                
+                                <br>
+                                
+                                <button type="submit">Post!</button>
+                                <button type="reset">Cancel</button>
+                            </form>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<script src="/js/stuff.js"></script>
+</body>
+</html>
