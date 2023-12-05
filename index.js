@@ -8,7 +8,7 @@ dotenv.config();
 
 const app = express();
 
-const PORT = process.env.port
+const PORT = process.env.PORT
 
 app.use(session({
     secret: 'your-secret-key', 
