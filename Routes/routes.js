@@ -14,7 +14,7 @@ const signupController = require('../Controller/signupController')
 const editReviewController = require('../Controller/editReviewController');
 const loginAdminCont = require('../Controller/loginAdminCont');
 const addReviewController = require('../Controller/addReviewController');
-const adminController = require('../controller/admin-controller');
+const adminController = require('../Controller/admin-controller');
 
 // Define the routes and associate them with their respective controller functions
 router.get('/', async (req, res) => {
